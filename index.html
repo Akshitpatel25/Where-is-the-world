@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is the world</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!--  -->
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <!--  -->
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  -->
+</head>
+
+<body>
+
+    <div class="main_container">
+
+        <div class="navbar">
+
+            <h1 class="title_">Where is the world?</h1>
+
+            <div class="modes">
+                <i id="modes_i" class="fa-solid fa-moon fa-xl"></i>
+                <p id="modes_p" class="mode_change">Light Mode</p>
+            </div>
+
+        </div>
+
+
+        <div class="main_box">
+
+            <div class="search_region">
+
+                <form class="search_bar">
+                    <button class="search_btn"><i class="fa-solid fa-magnifying-glass fa-l"></i></button>
+                    <input type="text" class="input_text" placeholder="Search for a country..">
+                </form>
+
+                <form class="region">
+                    <select name="region_select" id="region_select" onchange="getSelectedRegion()">
+                        <option value="Filter by Region" disabled selected>Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="Antarctic">Antarctic</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="result_page">
+
+                
+            </div>
+
+            <div class="individual_box">
+
+                <div class="back_button">
+                    <button class="back_btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back
+                    </button>
+
+                </div>
+
+
+                <div class="individual_country">
+                    <div class="individual_falg">
+                        
+                    </div>
+
+                    <div class="individual_details">
+                        
+                        <h1 class="indi_name">akshit</h1>
+                        
+                        <div class="indi_more_details">
+                            <div class="indi_more_d">Native Name:<pre class="indi_native_name"></pre></div>
+                            <div class="indi_more_d">Population: <pre class="indi_population"></pre></div>
+                            <div class="indi_more_d">Region: <pre class="indi_region"></pre></div>
+                            <div class="indi_more_d">SubRegion: <pre class="indi_subregion"></pre></div>
+                            <div class="indi_more_d">Capital: <pre class="indi_capital"></pre></div>
+                            <div class="indi_more_d">Top Level Domain: <pre class="indi_domain"></pre></div>
+                            <div class="indi_more_d">Currencies: <pre class="indi_currencies"></pre></div>
+                            <div class="indi_more_d">Languages: <pre class="indi_language"></pre></div>
+                        </div>
+
+                        <div class="indi_border_name">
+                            <div class="border_name" style="font-size: 18px;">Border Countries:</div>
+
+                            <div class="border_countries_name_box">
+                                
+                                <div class="border_countrie_box1"></div>
+                                <div class="border_countrie_box2"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+    <!--  -->
+</body>
+
+</html>

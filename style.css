@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: "Nunito Sans";
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--Very_Dark_Blue);
+}
+
+:root {
+    --Dark_Blue: hsl(209, 23%, 22%);
+    --Very_Dark_Blue: hsl(207, 26%, 17%);
+    /* --Very_Dark_Blue: hsl(200, 15%, 8%); */
+    --Dark_Gray: hsl(0, 0%, 52%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+.main_container {
+    width: 100vw;
+    max-width: 1440px;
+    min-width: 318px;
+    margin: auto;
+    /* height: 100vh; */
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: var(--Dark_Blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title_ {
+    color: var(--White);
+    font-size: 20px;
+}
+
+.modes {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modes i,
+p {
+    color: var(--White);
+}
+
+
+
+.main_box {
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+    background-color: var(--Very_Dark_Blue);
+}
+
+.search_region {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.search_bar {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+}
+
+.input_text {
+    width: 85%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+    font-size: 16px;
+}
+
+.input_text:focus {
+    outline: none;
+}
+
+.region {
+    width: fit-content;
+    height: 100%;
+}
+
+#region_select {
+    padding: 6px;
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#region_select:focus {
+    outline: none;
+}
+
+
+
+
+
+
+.result_page {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid rgb(59, 177, 27); */
+    /* background-color: purple; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 70px;
+    padding-right: 70px;
+    column-gap: 80px;
+    row-gap: 80px;
+    padding-bottom: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.imgs {
+    width: 100%;
+    height: 45%;
+    /* border: 1px solid white ; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.content {
+    width: 100%;
+    height: 55%;
+    /* border: 1px solid white; */
+    background-color: var(--Dark_Blue);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.box_title {
+    color: var(--Very_Light_Gray);
+    font-size: 16px;
+}
+
+.box_moreinfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.population .capital .region {
+    color: var(--Very_Light_Gray);
+}
+
+
+
+/* INDIVIDUAL BOX PART */
+
+.individual_box {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    display: none;
+    padding: 10px 70px 10px 70px;
+}
+
+.back_button {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.back_btn {
+    width: 7%;
+    padding: 5px 15px 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border: none;
+    background-color: var(--Dark_Blue);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 100;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.individual_country {
+    width: 100%;
+    padding: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+
+.individual_falg {
+    width: 40%;
+    height: 300px;
+    border: 10px solid var(--Dark_Blue);
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.individual_details {
+    width: 60%;
+    height: 300px;
+    /* border: 1px solid white; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.indi_name {
+    color: var(--White);
+    font-size: 30px;
+}
+
+.indi_more_details {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+
+.indi_more_d {
+    /* border: 1px solid white; */
+    color: rgb(255, 255, 255);
+    display: flex;
+    column-gap: 5px;
+}
+
+pre {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.indi_border_name {
+    width: 100%;
+    height: 15%;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.border_name {
+    color: var(--White);
+}
+
+.border_countries_name_box {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.border_countrie_box1,
+.border_countrie_box2,
+.border_countrie_box3 {
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    background-color: var(--Dark_Blue);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--White);
+}
+
+/* responsive */
+
+@media (max-width: 450px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .modes i,
+    .mode_change {
+        font-size: 14px;
+    }
+
+
+    .search_region {
+        padding: 10px;
+        flex-direction: column;
+        height: 100px;
+        justify-content: none;
+        align-items: start;
+        row-gap: 10px;
+
+    }
+
+    .search_bar {
+        width: 100%;
+    }
+
+    .box {
+        width: 300px;
+        height: 350px;
+    }
+
+
+
+    .back_btn {
+        width: fit-content;
+    }
+
+    .individual_box {
+        height: fit-content;
+        padding: 10px;
+        /* border: 1px solid white; */
+    }
+    .individual_country {
+        flex-direction: column;
+    }
+    .individual_details {
+        width: 100%;
+        row-gap: 40px;
+        height: fit-content;
+    }
+    .individual_falg {
+        width: 100%;
+        height: 250px;
+    }
+    .indi_more_details {
+        height: fit-content;
+        flex-wrap: nowrap;
+    }
+    
+
+    .indi_border_name {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: 20px;
+    }
+}
+
+
+body.light-mode {
+    --Dark_Blue: hsl(0, 0%, 90%);
+    --Very_Dark_Blue: hsl(0, 0%, 100%);
+    --Dark_Gray: hsl(0, 0%, 20%);
+    --Very_Light_Gray: hsl(0, 0%, 10%);
+    --White: hsl(0, 0%, 0%);
+}
+
+body.light-mode .indi_more_details .indi_more_d {
+    color: var(--Dark_Gray); /* Adjust this color for light mode */
+}
+
+body.light-mode .indi_more_details pre {
+    color: var(--Dark_Gray); /* Adjust this color for light mode */
+}
+
+body.light-mode .indi_more_details pre {
+    color: var(--White); /* Default color for dark mode */
+}
+
+body.light-mode .back_btn {
+    background-color: var(--Dark_Blue);
+    color: var(--White); 
+}
